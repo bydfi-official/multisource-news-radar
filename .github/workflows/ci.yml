@@ -22,4 +22,6 @@ jobs:
         run: python scripts/doctor.py --profile base --repair-plan
       - name: Tests
         run: python -m pytest -q
+      - name: Docker build (core target)
+        run: docker build --target final -t multisource-news-radar:core .
 
